@@ -1,4 +1,7 @@
 {
-  "version_su": 3,  
-  "version_fu": 2  
+  "version_su": 0,
+  "version_fu": 0,
+  "refresh": false,
+  "sync_url_primary": "https://play.google.com/store/apps/details?id=com.kuyu.minesweeper",
+  "sync_url_secondary": "https://appgallery.huawei.com/app/C104..."
 }
