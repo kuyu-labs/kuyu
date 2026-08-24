@@ -1,1 +1,601 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nonogram Picture Cross Logic Puzzles</title>
+    <meta name="description" content="Privacy Policy for Nonogram Picture Cross Logic Puzzles Android App by Kuyu Labs. Information regarding House Promotions, Google Play Services, Firebase Analytics, Remote Config, and Data Deletion.">
+    <meta name="keywords" content="Nonogram, Privacy Policy, House Promotions, Firebase Analytics, Remote Config, Google Play Services, Data Deletion, Kuyu Labs, Android">
+    <meta name="author" content="Kuyu Labs">
+    <meta property="og:title" content="Privacy Policy - Nonogram Logic Puzzles">
+    <meta property="og:description" content="Official Privacy Policy for Nonogram Logic Puzzles. Clear details on data usage, house promotions, Firebase services, and Data Deletion.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --surface-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-primary: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.25);
+            --accent-light: #818cf8;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-radius: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f8fafc;
+            --surface-color: #ffffff;
+            --surface-hover: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --accent-primary: #4f46e5;
+            --accent-glow: rgba(79, 70, 229, 0.15);
+            --accent-light: #6366f1;
+            --success-color: #059669;
+            --warning-color: #d97706;
+            --danger-color: #dc2626;
+            --border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: var(--transition);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Ambient Glow */
+        .bg-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 860px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .brand-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent-primary), #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .brand-text h1 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-text p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .theme-toggle {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--surface-hover);
+            transform: scale(1.05);
+        }
+
+        /* Hero Banner */
+        .hero {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), #a855f7, var(--success-color));
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: var(--accent-glow);
+            color: var(--accent-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .meta-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            opacity: 0.8;
+        }
+
+        /* Summary Pillar Cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .summary-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .summary-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-light);
+        }
+
+        .summary-card i {
+            font-size: 1.5rem;
+            color: var(--accent-light);
+        }
+
+        .summary-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .summary-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .section-card:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1rem;
+        }
+
+        .section-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--accent-glow);
+            color: var(--accent-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+        }
+
+        .section-header h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .section-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+        }
+
+        .bullet-list li i {
+            color: var(--success-color);
+            margin-top: 4px;
+            font-size: 0.85rem;
+        }
+
+        /* Special Highlighting for Data Deletion */
+        .danger-card {
+            border-left: 4px solid var(--danger-color);
+        }
+        .danger-card .section-icon {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger-color);
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, var(--surface-color), var(--surface-hover));
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-box h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            background: var(--accent-primary);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .btn-email:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 1.5rem;
+            padding-bottom: 3rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .hero {
+                padding: 1.75rem 1.25rem;
+            }
+            .hero h2 {
+                font-size: 1.75rem;
+            }
+            .section-card {
+                padding: 1.25rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Nonogram</h1>
+                    <p>Picture Cross Logic Puzzles</p>
+                </div>
+            </a>
+            <button class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Theme">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield-halved"></i> Official Privacy Policy
+            </div>
+            <h2>Privacy Policy</h2>
+            <p>Transparency and data protection for Nonogram Picture Cross Logic Puzzles. Clear details on House Promotions, Google Play Services, Firebase Analytics, Remote Config, and Data Deletion.</p>
+            <div class="meta-date">
+                <i class="fa-regular fa-clock"></i> Last updated: August 24, 2026 • Version 1.0.0
+            </div>
+        </section>
+
+        <!-- Summary Pillar Cards -->
+        <div class="summary-grid">
+            <div class="summary-card">
+                <i class="fa-solid fa-bullhorn"></i>
+                <h4>House Promotions</h4>
+                <p>Zero third-party ad networks. Only internal cross-promotions for our own games.</p>
+            </div>
+            <div class="summary-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Firebase Analytics</h4>
+                <p>Anonymous usage telemetry & crash reports strictly at max.</p>
+            </div>
+            <div class="summary-card">
+                <i class="fa-solid fa-sliders"></i>
+                <h4>Remote Config</h4>
+                <p>Dynamically tune puzzle parameters & feature balance.</p>
+            </div>
+            <div class="summary-card">
+                <i class="fa-solid fa-trash-arrow-up"></i>
+                <h4>Data Deletion</h4>
+                <p>Clear local storage or request analytics deletion anytime.</p>
+            </div>
+        </div>
+
+        <!-- Section 1: Overview -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <h3>1. Overview & Data Philosophy</h3>
+            </div>
+            <p>Nonogram ("we", "our", "us") operated by Kuyu Labs respects your privacy rights. We do not collect or store personal identifiers such as your real name, email address, phone number, or home address. This policy explains what services we use and how data is processed.</p>
+        </div>
+
+        <!-- Section 2: House Promotions (No Third Party Ads) -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <h3>2. Internal House Promotions (No Third-Party Ads)</h3>
+            </div>
+            <p>We do not display third-party advertisements or integrate third-party ad brokers (such as Google AdMob or external ad networks).</p>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Own Apps Only:</strong> Any promotional banners or cross-promotions shown inside Nonogram are exclusively for our own games developed by Kuyu Labs.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Zero Third-Party Ad Tracking:</strong> We do not share your device Advertising ID with third-party ad networks or external advertisers.</li>
+            </ul>
+        </div>
+
+        <!-- Section 3: Google Play Services -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-brands fa-google-play"></i>
+                </div>
+                <h3>3. Google Play Services & Play Games</h3>
+            </div>
+            <p>We utilize official Google Play Services APIs for app infrastructure and optional Google Play Games features.</p>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Google Play Games:</strong> If you choose to sign in, achievement progress and leaderboard scores are processed by Google under <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-light);">Google's Privacy Policy</a>.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Optional Sign-In:</strong> Google Play Games sign-in is completely voluntary and can be disconnected at any time.</li>
+            </ul>
+        </div>
+
+        <!-- Section 4: Firebase Analytics & Remote Config -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <h3>4. Firebase Analytics & Remote Config</h3>
+            </div>
+            <p>We use Google Firebase services limited strictly to <strong>Firebase Analytics</strong> and <strong>Firebase Remote Config</strong> at maximum to maintain game stability and improve gameplay balance.</p>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Firebase Analytics:</strong> Collects anonymous telemetry (such as level completion rates, app launch events, and crash logs) to diagnose bugs and optimize puzzle difficulty.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Firebase Remote Config:</strong> Allows us to adjust game parameters (such as hint token rewards, daily challenge timing, or event banners) dynamically without requiring a full app update.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Anonymized Telemetry:</strong> All analytics data is aggregated and anonymized without linking to your personal identity.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Local Storage -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3>5. Local Device Storage</h3>
+            </div>
+            <p>All your core gameplay progress is saved locally on your Android device using standard Android DataStore and SharedPreferences.</p>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-circle-check"></i> Solved puzzle grids, level stars, and current streak statistics.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Custom puzzles created using the in-game Puzzle Creator.</li>
+                <li><i class="fa-solid fa-circle-check"></i> User settings (haptics, sound effects, theme choices, auto-check preferences).</li>
+            </ul>
+        </div>
+
+        <!-- Section 6: Data Deletion -->
+        <div class="section-card danger-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <h3>6. Data Deletion & User Rights</h3>
+            </div>
+            <p>You have total ownership and control over your data. You may delete or request deletion of your information at any time through the following methods:</p>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Delete Local Game Data:</strong> Clear all local save files and progress instantly by navigating to <em>Android Settings &gt; Apps &gt; Nonogram &gt; Storage &amp; Cache &gt; Clear Storage</em>.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Disconnect Play Games:</strong> Revoke access to Google Play Games via <em>Google Account Settings &gt; Data &amp; Privacy &gt; Third-party apps with account access &gt; Nonogram</em>.</li>
+                <li><i class="fa-solid fa-circle-check"></i> <strong>Request Data Deletion Support:</strong> If you wish to submit a data deletion inquiry regarding Firebase Analytics, email us at <a href="mailto:kuyu.labs.contact@gmail.com" style="color: var(--accent-light); font-weight: bold;">kuyu.labs.contact@gmail.com</a>. We will process your deletion request within 48 hours.</li>
+            </ul>
+        </div>
+
+        <!-- Section 7: Children's Privacy -->
+        <div class="section-card">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fa-solid fa-child-reaching"></i>
+                </div>
+                <h3>7. Children's Privacy (COPPA & GDPR)</h3>
+            </div>
+            <p>Nonogram is a family-friendly logic puzzle game. We do not knowingly collect personal identifiable data from children under the age of 13 (or under 16 in the EU). Our app includes no public chat rooms or social profiling.</p>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h3>Questions or Privacy Support?</h3>
+            <p>If you have any questions regarding this Privacy Policy or wish to request data deletion support, please contact us.</p>
+            <a href="mailto:kuyu.labs.contact@gmail.com" class="btn-email">
+                <i class="fa-solid fa-envelope"></i> Contact kuyu.labs.contact@gmail.com
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Kuyu Labs. All rights reserved.</p>
+            <p style="margin-top: 6px;">Nonogram Picture Cross Logic Puzzles for Android.</p>
+        </footer>
+    </div>
+
+    <!-- Theme Switch Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        
+        // Detect system preference or saved preference
+        const currentTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+
+        if (currentTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeIcon.className = 'fa-solid fa-sun';
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'light') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.className = 'fa-solid fa-sun';
+            }
+        });
+    </script>
+</body>
+</html>
