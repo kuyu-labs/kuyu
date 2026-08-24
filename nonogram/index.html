@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,6 +52,10 @@
             --border-color: rgba(0, 0, 0, 0.08);
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -70,6 +73,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* Target anchor highlight animation */
+        :target {
+            scroll-margin-top: 2rem;
+            border-color: var(--accent-light) !important;
+            box-shadow: 0 0 25px var(--accent-glow) !important;
         }
 
         /* Ambient Glow */
@@ -228,6 +238,8 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
             transition: var(--transition);
         }
 
@@ -419,7 +431,7 @@
         </header>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="top">
             <div class="hero-badge">
                 <i class="fa-solid fa-shield-halved"></i> Official Privacy Policy
             </div>
@@ -432,30 +444,30 @@
 
         <!-- Summary Pillar Cards -->
         <div class="summary-grid">
-            <div class="summary-card">
+            <a href="#house-promotions" class="summary-card">
                 <i class="fa-solid fa-bullhorn"></i>
                 <h4>House Promotions</h4>
                 <p>Zero third-party ad networks. Only internal cross-promotions for our own games.</p>
-            </div>
-            <div class="summary-card">
+            </a>
+            <a href="#firebase-analytics" class="summary-card">
                 <i class="fa-solid fa-chart-line"></i>
                 <h4>Firebase Analytics</h4>
                 <p>Anonymous usage telemetry & crash reports strictly at max.</p>
-            </div>
-            <div class="summary-card">
+            </a>
+            <a href="#remote-config" class="summary-card">
                 <i class="fa-solid fa-sliders"></i>
                 <h4>Remote Config</h4>
                 <p>Dynamically tune puzzle parameters & feature balance.</p>
-            </div>
-            <div class="summary-card">
+            </a>
+            <a href="#data-deletion" class="summary-card">
                 <i class="fa-solid fa-trash-arrow-up"></i>
                 <h4>Data Deletion</h4>
                 <p>Clear local storage or request analytics deletion anytime.</p>
-            </div>
+            </a>
         </div>
 
         <!-- Section 1: Overview -->
-        <div class="section-card">
+        <div class="section-card" id="overview">
             <div class="section-header">
                 <div class="section-icon">
                     <i class="fa-solid fa-circle-info"></i>
@@ -466,7 +478,7 @@
         </div>
 
         <!-- Section 2: House Promotions (No Third Party Ads) -->
-        <div class="section-card">
+        <div class="section-card" id="house-promotions">
             <div class="section-header">
                 <div class="section-icon">
                     <i class="fa-solid fa-bullhorn"></i>
@@ -481,7 +493,7 @@
         </div>
 
         <!-- Section 3: Google Play Services -->
-        <div class="section-card">
+        <div class="section-card" id="google-play-services">
             <div class="section-header">
                 <div class="section-icon">
                     <i class="fa-brands fa-google-play"></i>
@@ -496,8 +508,8 @@
         </div>
 
         <!-- Section 4: Firebase Analytics & Remote Config -->
-        <div class="section-card">
-            <div class="section-header">
+        <div class="section-card" id="firebase-analytics">
+            <div class="section-header" id="remote-config">
                 <div class="section-icon">
                     <i class="fa-solid fa-fire"></i>
                 </div>
@@ -512,7 +524,7 @@
         </div>
 
         <!-- Section 5: Local Storage -->
-        <div class="section-card">
+        <div class="section-card" id="local-storage">
             <div class="section-header">
                 <div class="section-icon">
                     <i class="fa-solid fa-database"></i>
@@ -527,9 +539,9 @@
             </ul>
         </div>
 
-        <!-- Section 6: Data Deletion -->
-        <div class="section-card danger-card">
-            <div class="section-header">
+        <!-- Section 6: Data Deletion (Critical Anchor for Play Console) -->
+        <div class="section-card danger-card" id="data-deletion">
+            <div class="section-header" id="delete-data">
                 <div class="section-icon">
                     <i class="fa-solid fa-trash-can"></i>
                 </div>
@@ -544,7 +556,7 @@
         </div>
 
         <!-- Section 7: Children's Privacy -->
-        <div class="section-card">
+        <div class="section-card" id="children-privacy">
             <div class="section-header">
                 <div class="section-icon">
                     <i class="fa-solid fa-child-reaching"></i>
@@ -555,7 +567,7 @@
         </div>
 
         <!-- Contact Box -->
-        <div class="contact-box">
+        <div class="contact-box" id="contact">
             <h3>Questions or Privacy Support?</h3>
             <p>If you have any questions regarding this Privacy Policy or wish to request data deletion support, please contact us.</p>
             <a href="mailto:kuyu.labs.contact@gmail.com" class="btn-email">
