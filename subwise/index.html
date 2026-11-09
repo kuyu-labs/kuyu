@@ -5,80 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Subwise: Subscription Tracker</title>
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 32px 16px;
+            background-color: var(--bg-page);
+            color: var(--text-main);
         }
-        h1, h2 {
-            color: #1a4e95; /* A classic Minesweeper-like blue */
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
         }
+
+        .header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
         h1 {
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            color: #0f172a;
+            font-size: 28px;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
         }
+
+        .app-badge {
+            display: inline-block;
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
         .date {
-            font-style: italic;
-            color: #666;
+            font-size: 14px;
+            color: var(--text-muted);
             display: block;
-            margin-bottom: 20px;
         }
+
+        h2 {
+            color: #0f172a;
+            font-size: 19px;
+            margin-top: 32px;
+            margin-bottom: 14px;
+            letter-spacing: -0.3px;
+        }
+
         p {
-            margin-bottom: 15px;
+            margin: 0 0 16px 0;
+            font-size: 15px;
         }
+
         ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
+            margin: 0 0 18px 0;
+            padding-left: 22px;
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .callout {
+            background-color: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            font-size: 15px;
+            color: #166534;
+        }
+
+        .trader-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .trader-card table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .trader-card td {
+            padding: 8px 6px;
+            vertical-align: top;
+        }
+
+        .trader-card td.label {
+            font-weight: 600;
+            width: 220px;
+            color: var(--text-main);
+        }
+
+        .trader-card td.val {
+            color: #334155;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 12px;
+            }
+            .container {
+                padding: 24px 18px;
+            }
+            h1 {
+                font-size: 23px;
+            }
+            .trader-card td.label {
+                width: 130px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Privacy Policy for Subwise: Subscription Tracker</h1>
-    <span class="date">Effective Date: December 4, 2025</span>
+<div class="container">
+    <div class="header">
+        <span class="app-badge">Official Policy</span>
+        <h1>Privacy Policy & Legal Disclosures</h1>
+        <span class="date">Subwise: Subscription Tracker &bull; Last Updated: November 9, 2026</span>
+    </div>
 
-    <p>This page informs users regarding our policies with the collection, use, and disclosure of personal information if anyone decides to use our Service, the <strong>Subwise: Subscription Tracker</strong> application.</p>
+    <p>This Privacy Policy describes the policies and practices of <strong>Subwise: Subscription Tracker</strong> ("we", "our", or "the App") developed by <strong>Kuyu Labs</strong> regarding the collection, use, and disclosure of information when you use our mobile application.</p>
 
-    <h2>1. Data Collection Policy: We Collect NO Data</h2>
+    <div class="callout">
+        <strong>100% Offline-First Architecture:</strong> Subwise does not operate remote database servers, does not transmit your personal financial records over the internet, and does not require creating an external account to track your subscriptions.
+    </div>
 
-    <p>We believe in keeping your privacy simple and secure. The <strong>Subwise: Subscription Tracker</strong> application is designed to be a completely self-contained experience. While an internet connection may be required for downloading the app, receiving updates, or accessing external links (such as this Privacy Policy or developer contact information), the core gameplay and functionality do not require network access.</p>
-
+    <h2>1. Data Collection Policy: Zero Remote Collection</h2>
+    <p>We believe personal finance and recurring subscription information should remain strictly private. The Subwise application is designed as a standalone, on-device utility:</p>
     <ul>
-        <li><strong>No Personal Information:</strong> We do not collect any personally identifiable information (PII) from users.</li>
-        <li><strong>No Device Information:</strong> We do not collect any device identifiers, IP addresses, location data, or usage statistics.</li>
-        <li><strong>No Third-Party Analytics or Advertising:</strong> The application does not use any third-party analytics services (like Google Analytics, Flurry, etc.) or advertising services that collect data about your activity.</li>
+        <li><strong>No Personal Financial Records Collected:</strong> All subscription names, costs, currencies, cycle frequencies, renewal dates, and payment history notes are stored exclusively on your device in a secure local database (SQLite/Room). This data is never sent to us or any third party.</li>
+        <li><strong>No Account Creation:</strong> You do not need to register with an email, phone number, or password. You retain full, sole ownership of your information.</li>
+        <li><strong>No Advertising SDKs:</strong> Subwise contains no third-party ad networks (such as Google AdMob, Unity Ads, or Meta Audience Network) and does not track your activity across other applications or websites.</li>
+        <li><strong>No Third-Party Analytics:</strong> We do not integrate tracking frameworks (such as Firebase Analytics, Flurry, or Mixpanel). We do not collect device fingerprints, advertising IDs (GAID), or location data.</li>
     </ul>
 
-    <p>Your game progress (like high scores or current game state) may be stored locally on your device, but this information is never transmitted to us or any third party.</p>
+    <h2>2. In-App Purchases & Google Play Billing</h2>
+    <p>Subwise offers an optional one-time purchase ("Apex Pro") to unlock premium features, such as custom theme presets and automated calendar synchronization:</p>
+    <ul>
+        <li>All payments, billing information, and transactions are processed directly and securely by <strong>Google Play (Google LLC)</strong> via the Google Play Billing Library.</li>
+        <li>Subwise <strong>never collects, sees, or stores</strong> your credit card numbers, bank accounts, or billing addresses.</li>
+        <li>Purchase receipts are verified on-device via Google Play Store services in accordance with the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>.</li>
+    </ul>
 
-    <h2>2. Service Providers</h2>
+    <h2>3. Device Permissions & How They Are Used</h2>
+    <p>Subwise only requests permissions strictly necessary to perform functions you explicitly choose to enable:</p>
+    <ul>
+        <li><strong>Notifications & Exact Alarms (<code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>):</strong> Used solely to trigger scheduled, local on-device alarms reminding you when a subscription or bill is due. No notification content is transmitted over the internet.</li>
+        <li><strong>Calendar Access (<code>READ_CALENDAR</code>, <code>WRITE_CALENDAR</code> - Optional):</strong> If you choose to enable calendar synchronization, the app uses this permission solely to create and update subscription reminder events on your local device calendar. We do not read your personal calendar entries, nor do we upload calendar data.</li>
+        <li><strong>Local Backup & Storage Access:</strong> When exporting or importing JSON backups, the app interacts solely with the file location you choose via the Android system file picker (Storage Access Framework).</li>
+    </ul>
 
-    <p>We do not employ third-party companies or individuals for the purpose of facilitating our Service, providing the Service on our behalf, performing Service-related services, or assisting us in analyzing how our Service is used, as we do not collect or analyze any user data.</p>
+    <h2>4. European Union Digital Services Act (DSA) & Trader Status Declaration</h2>
+    <p>In accordance with the European Union Digital Services Act (Regulation (EU) 2022/2065 - "DSA") and Google Play consumer protection requirements, the following trader and publisher details are disclosed to consumers in the European Economic Area (EEA):</p>
 
-    <h2>3. Security</h2>
+    <div class="trader-card">
+        <table>
+            <tr>
+                <td class="label">Developer / Trader:</td>
+                <td class="val"><strong>Kuyu Labs</strong></td>
+            </tr>
+            <tr>
+                <td class="label">Trader Status:</td>
+                <td class="val"><strong>Trader</strong> (Professional Developer offering digital goods/in-app upgrades in the EU/EEA under Google Play Developer Terms)</td>
+            </tr>
+            <tr>
+                <td class="label">Developer Email:</td>
+                <td class="val"><a href="mailto:kuyu.labs.contact@gmail.com">kuyu.labs.contact@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td class="label">Developer Phone:</td>
+                <td class="val"><a href="tel:+919999082755">+91 99990 82755</a></td>
+            </tr>
+            <tr>
+                <td class="label">Governing Framework:</td>
+                <td class="val">Digital Services Act (EU) 2022/2065 &amp; EU Consumer Rights Directive</td>
+            </tr>
+            <tr>
+                <td class="label">Consumer Rights &amp; Withdrawals:</td>
+                <td class="val">Digital content and in-app upgrades are fulfilled immediately upon purchase. EU statutory withdrawal and refund rights are administered in accordance with the <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play Refund Policy</a>.</td>
+            </tr>
+        </table>
+    </div>
 
-    <p>Since we do not collect any Personal Information from you, there is no data to be secured or protected by us. We strive to maintain a secure application experience, but please be aware that the security of your device itself is your responsibility.</p>
+    <h2>5. Third-Party Service Providers</h2>
+    <p>Because Subwise does not store or analyze your data on remote servers, we do not employ external service providers to process personal user information. The only external system involved is Google Play for processing optional in-app purchases and providing app updates through the official store.</p>
 
-    <h2>4. Children’s Privacy</h2>
+    <h2>6. Data Retention, Portability, and Deletion</h2>
+    <p>Because all data is stored locally on your device:</p>
+    <ul>
+        <li><strong>Data Portability:</strong> You can export a comprehensive copy of your subscriptions at any time via the Settings &rarr; <em>Export Backup (JSON)</em> feature.</li>
+        <li><strong>Deletion:</strong> You can permanently erase all stored data by clearing the app data in Android Settings (<em>Settings &rarr; Apps &rarr; Subwise &rarr; Storage &rarr; Clear Storage</em>) or by uninstalling the application from your device. Since we do not host your data on external servers, no remote account deletion request is required.</li>
+    </ul>
 
-    <p>Our Services do not address anyone under the age of 13. Given that we do not collect any personal data, we cannot knowingly collect information from children under 13. In the case we discover that a child under 13 has provided us with personal information (which is impossible under current app functionality), we would immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to take necessary actions.</p>
+    <h2>7. Children’s Privacy</h2>
+    <p>Our service does not address anyone under the age of 13. Subwise does not knowingly collect personally identifiable information from children under 13. If you believe your child has provided personal information to any third party through our app, please contact us immediately so we can assist.</p>
 
-    <h2>5. Changes to This Privacy Policy</h2>
+    <h2>8. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time, including to reflect changes in legal requirements or app features. Any revisions will be published on this page with an updated "Last Updated" date. We encourage you to review this page periodically.</p>
 
-    <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your consumer rights, please contact us at:</p>
+    <ul>
+        <li><strong>Developer Email:</strong> <a href="mailto:kuyu.labs.contact@gmail.com">kuyu.labs.contact@gmail.com</a></li>
+        <li><strong>Developer Phone:</strong> <a href="tel:+919999082755">+91 99990 82755</a></li>
+    </ul>
 
-    <h2>6. Contact Us</h2>
-
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
-
-    <p><strong>Email:</strong> kuyu.labs.contact@gmail.com</p>
-    
+    <div class="footer">
+        &copy; 2026 Kuyu Labs. All rights reserved. Subwise: Subscription Tracker.
+    </div>
+</div>
 
 </body>
 </html>
